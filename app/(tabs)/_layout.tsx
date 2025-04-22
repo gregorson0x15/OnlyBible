@@ -2,6 +2,7 @@ import { ImageBackground, Image, Text, View } from "react-native";
 import React from 'react'
 import {Tabs} from "expo-router";
 import {icons} from "@/constants/icons";
+import {images} from "@/constants/images";
 
 const _Layout = () => {
     return (
@@ -13,9 +14,9 @@ const _Layout = () => {
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <>
-                            <ImageBackground
-
-                            />
+                            <ImageBackground>
+                                <Image source={icons.home} tintColor='#151312' className="size-5" />
+                            </ImageBackground>
                         </>
                     )
                 }}
@@ -24,14 +25,28 @@ const _Layout = () => {
                 name="saved"
                 options={{
                     title: 'Saved',
-                    headerShown: false
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <Image source={icons.save} tintColor='#151312' className="size-5" />
+                            </ImageBackground>
+                        </>
+                    )
                 }}
             />
             <Tabs.Screen
             name="search"
             options={{
                 title: 'Search',
-                headerShown: false
+                headerShown: false,
+                tabBarIcon: ({ focused }) => (
+                    <>
+                        <ImageBackground>
+                            <Image source={icons.search} tintColor='#151312' className="size-5" />
+                        </ImageBackground>
+                    </>
+                )
             }}
         />
         </Tabs>
