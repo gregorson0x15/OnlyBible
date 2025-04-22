@@ -6,14 +6,6 @@ import data from '../book_order.json';
 
 type ItemProps = {title: string};
 
-const bg = () => {
-    const router = useRouter();
-    return(
-        <View className="flex-1 bg-black"/>
-    )
-}
-
-
 
 const Item = ({title}: ItemProps) => (
     <View  style={styles.item}>

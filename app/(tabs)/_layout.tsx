@@ -22,6 +22,33 @@ const _Layout = () => {
                 }}
             />
             <Tabs.Screen
+                name="search"
+                options={{
+                    title: 'Search',
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <Image source={icons.search} tintColor='#151312' className="size-5" />
+                            </ImageBackground>
+                        </>
+                    )
+                }}
+            />
+            <Tabs.Screen
+                name="daily"
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <Image source={icons.daily} tintColor='#151312' className="size-5" />
+                            </ImageBackground>
+                        </>
+                    )
+                }}
+            />
+            <Tabs.Screen
                 name="saved"
                 options={{
                     title: 'Saved',
@@ -35,20 +62,6 @@ const _Layout = () => {
                     )
                 }}
             />
-            <Tabs.Screen
-            name="search"
-            options={{
-                title: 'Search',
-                headerShown: false,
-                tabBarIcon: ({ focused }) => (
-                    <>
-                        <ImageBackground>
-                            <Image source={icons.search} tintColor='#151312' className="size-5" />
-                        </ImageBackground>
-                    </>
-                )
-            }}
-        />
         </Tabs>
 
     )
